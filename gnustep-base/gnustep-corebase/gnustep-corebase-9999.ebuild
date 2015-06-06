@@ -17,10 +17,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~arm"
 IUSE="multilib debug"
 
-RDEPEND="=gnustep-base/gnustep-base-9999"
+RDEPEND="gnustep-base/gnustep-base"
 DEPEND="${RDEPEND}
 	>=sys-devel/clang-2.9
-	=gnustep-base/gnustep-make-9999"
+	gnustep-base/gnustep-make"
 
 src_unpack() {
 	subversion_src_unpack
