@@ -27,8 +27,9 @@ src_unpack() {
 }
 
 src_configure() {
-	export CC=clang
-	export CXX=clang++
+	# These don't work if the gcc objc is used instead of the libobjc2 package.
+	#export CC=clang
+	#export CXX=clang++
 	
 	if use multilib; then
 		cp -a "${WORKDIR}/${PF}" "${WORKDIR}/${PF}-32"

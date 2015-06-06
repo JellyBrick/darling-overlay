@@ -21,21 +21,21 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 
 src_unpack() {
-<------>git-2_src_unpack
+	git-2_src_unpack
 }
 
 src_prepare() {
-<------>eautoreconf
+	eautoreconf
 }
 
 src_configure() {
-<------>econf
+	econf
 }
 
 src_compile() {
-<------>emake
+	emake
 }
 
 src_install() {
-<------>emake DESTDIR="${D}" install
+	emake DESTDIR="${D}" install
 }
