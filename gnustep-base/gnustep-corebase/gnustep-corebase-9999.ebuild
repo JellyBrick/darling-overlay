@@ -20,16 +20,15 @@ IUSE="multilib debug"
 RDEPEND="gnustep-base/gnustep-base"
 DEPEND="${RDEPEND}
 	>=sys-devel/clang-2.9
-	gnustep-base/gnustep-make"
+	=gnustep-base/gnustep-make-2.6.6[libobjc2]"
 
 src_unpack() {
 	subversion_src_unpack
 }
 
 src_configure() {
-	# These don't work if the gcc objc is used instead of the libobjc2 package.
-	#export CC=clang
-	#export CXX=clang++
+	export CC=clang
+	export CXX=clang++
 	
 	if use multilib; then
 		cp -a "${WORKDIR}/${PF}" "${WORKDIR}/${PF}-32"
