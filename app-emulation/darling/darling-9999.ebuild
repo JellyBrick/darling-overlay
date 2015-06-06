@@ -15,7 +15,7 @@ EGIT_REPO_URI="https://github.com/LubosD/darling.git"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="libav"
 
 DEPEND=">=sys-devel/clang-3.2
 	virtual/udev
@@ -30,7 +30,8 @@ RDEPEND="virtual/udev
 	dev-libs/libdispatch
 	dev-libs/openssl
 	>=dev-libs/libbsd-0.5.2
-	media-video/libav"
+	!libav? ( media-video/ffmpeg:0= )
+	libav? ( >=media-video/libav-11:0= )"
 
 src_unpack() {
 	git-2_src_unpack
