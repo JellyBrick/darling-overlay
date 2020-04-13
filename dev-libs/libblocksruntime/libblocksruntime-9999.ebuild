@@ -2,9 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=5
+EAPI=7
 
-inherit autotools git-2
+inherit autotools git-r3
 
 DESCRIPTION="This source tree is based on the BlocksRuntime directory of the compiler-rt sources"
 HOMEPAGE="https://github.com/mheily/blocks-runtime"

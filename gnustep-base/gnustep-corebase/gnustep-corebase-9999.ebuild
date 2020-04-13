@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/gnustep-base/libobjc2/libobjc2-1.6.1.ebuild,v 1.1 2012/07/25 12:11:23 voyageur Exp $
 
-EAPI=4
+EAPI=7
 inherit multilib subversion
 
 DESCRIPTION="GNUstep CoreBase framework"
@@ -19,17 +19,13 @@ IUSE="multilib debug"
 
 RDEPEND="gnustep-base/gnustep-base"
 DEPEND="${RDEPEND}
-	>=sys-devel/clang-2.9
-	=gnustep-base/gnustep-make-2.6.6[libobjc2]"
+	=gnustep-base/gnustep-make-2.8.0[libobjc2]"
 
 src_unpack() {
 	subversion_src_unpack
 }
 
 src_configure() {
-	export CC=clang
-	export CXX=clang++
-	
 	if use multilib; then
 		cp -a "${WORKDIR}/${PF}" "${WORKDIR}/${PF}-32"
 		pushd "${WORKDIR}/${PF}-32"

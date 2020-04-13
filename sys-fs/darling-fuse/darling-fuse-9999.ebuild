@@ -1,24 +1,23 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2020 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=5
+EAPI=7
 
-inherit git-2 cmake-utils
+inherit git-r3 cmake-utils
 
 DESCRIPTION="Readonly access to .dmg files with HFS+ filesystem via FUSE"
-HOMEPAGE="http://darling.dolezel.info"
+HOMEPAGE="http://darlinghq.org"
 SRC_URI=""
 
-EGIT_REPO_URI="https://github.com/LubosD/darling-dmg.git"
+EGIT_REPO_URI="https://github.com/darlinghq/darling-dmg"
 
 LICENSE=""
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=sys-devel/clang-3.1
-	sys-fs/fuse
+DEPEND="sys-fs/fuse
 	sys-libs/zlib
 	app-arch/bzip2
 	dev-libs/openssl
@@ -27,13 +26,10 @@ DEPEND=">=sys-devel/clang-3.1
 RDEPEND="${DEPEND}"
 
 src_unpack() {
-	git-2_src_unpack
+	git-r3_src_unpack
 }
 
 src_configure() {
-	export CC=clang
-	export CXX=clang++
-
 	cmake-utils_src_configure
 }
 

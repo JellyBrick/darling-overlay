@@ -1,0 +1,12 @@
+<repositories version="1.0">
+    <repo quality="experimental" status="unofficial">
+        <name>darling-overlay</name>
+        <description lang="en">Darling Overlay</description>
+        <homepage>https://github.com/JellyBrick/darling-overlay</homepage>
+        <owner type="person">
+            <email>shlee1503@naver.com</email>
+            <name>JellyBrick</name>
+        </owner>
+		<source type="git">git://github.com/JellyBrick/darling-overlay.git</source>
+    </repo>
+</repositories>
