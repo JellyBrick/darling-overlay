@@ -21,7 +21,7 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 
 src_unpack() {
-	git-2_src_unpack
+	git-r3_src_unpack
 }
 
 src_prepare() {
