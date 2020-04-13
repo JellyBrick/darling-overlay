@@ -19,7 +19,7 @@ IUSE="multilib debug"
 
 RDEPEND="gnustep-base/gnustep-base"
 DEPEND="${RDEPEND}
-	=gnustep-base/gnustep-make-2.8.0[libobjc2]"
+	=gnustep-base/gnustep-make-9999[libobjc2]"
 
 src_unpack() {
 	subversion_src_unpack
